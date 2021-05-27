@@ -1,0 +1,11 @@
+# Output directories
+/_backup
+/img-dist
+/node_modules
+
+# Misc
+.DS_Store
+Thumbs.db
+*.code-workspace
+yarn-debug.log*
+yarn-error.log*
