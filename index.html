@@ -214,14 +214,98 @@
             <div class="container">
               <div class="branch-main-images__images">
                 <div class="slideshow">
-                  <div class="embed" style="padding-bottom: 45%;">
-                    <img
-                      src="img-source/zlin.jpg"
-                      srcset="
-                      img-source/zlin.jpg,
-                      img-source/zlin-2x.jpg 2x,
-                      "
-                      alt="Zlín" class=" slideshow__image slideshow__image--active embed__content ">
+                  <!-- background image -->
+                  <div class="embed embed-bg mb-4"></div>
+
+                  <!-- responsive image -->
+                  <div class="embed">
+                    <style>
+                      .embed-bg {
+                        background-image: url(img-dist/zlin-690p.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+
+                        background-image: -webkit-image-set(
+                          url(img-dist/zlin-690p.jpg) 1x,
+                          url(img-dist/zlin-2220.jpg) 2x
+                        );
+
+                        background-image: -webkit-image-set(
+                          url(img-dist/zlin-690p.avif) type="image/avif",
+                          url(img-dist/zlin-690p.webp) type="image/webp"
+                        );
+                        
+                      }
+
+
+                      .embed {
+                        padding-bottom: 72.4%;
+                      }
+
+                      @media (min-width: 576px) {
+                        .embed {
+                          padding-bottom: 45%;
+                        }
+                      }
+                    </style>
+                    <picture>
+                      <source
+                        type="image/avif"
+                        srcset="img-dist/zlin-690p.avif 690w"
+                        sizes="(max-width: 575px) calc(100vw - 30px)"
+                        media="(max-width: 575px)"
+                        >
+                      <source
+                        type="image/webp"
+                        srcset="img-dist/zlin-690p.webp 690w"
+                        sizes="(max-width: 575px) calc(100vw - 30px)"
+                        media="(max-width: 575px)"
+                        >  
+                      <source
+                        type="image/avif"
+                        srcset="
+                        img-dist/zlin-690.avif 690w,
+                        img-dist/zlin-1110.avif 1110w,
+                        img-dist/zlin-2220.avif 2220w
+                        "
+                        sizes="
+                        (max-width: 575px) calc(100vw - 30px),
+                        (max-width: 767px) 510px,
+                        (max-width: 995px) 690px,
+                        (max-width: 1199px) 930px,
+                        1110px
+                        ">
+                      <source
+                        type="image/webp"
+                        srcset="
+                        img-dist/zlin-690.webp 690w,
+                        img-dist/zlin-1110.webp 1110w,
+                        img-dist/zlin-2220.webp 2220w
+                        "
+                        sizes="
+                        (max-width: 575px) calc(100vw - 30px),
+                        (max-width: 767px) 510px,
+                        (max-width: 995px) 690px,
+                        (max-width: 1199px) 930px,
+                        1110px
+                        ">
+                      <img
+                        src="img-dist/zlin-1110.jpg"
+                        srcset="
+                        img-dist/zlin-690.jpg 690w,
+                        img-dist/zlin-1110.jpg 1110w,
+                        img-dist/zlin-2220.jpg 2220w
+                        "
+                        sizes="
+                        (max-width: 575px) calc(100vw - 30px),
+                        (max-width: 767px) 510px,
+                        (max-width: 995px) 690px,
+                        (max-width: 1199px) 930px,
+                        1110px
+                        "
+                        alt="Zlín" class=" slideshow__image slideshow__image--active embed__content ">
+                    </picture>
                   </div>
                 </div>
               </div>
